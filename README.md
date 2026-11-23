@@ -1,46 +1,27 @@
-# Портфолио — Game UX/UI Designer
+# Game UI/UX Designer — portfolio
 
-Простой статический сайт: только HTML + CSS, без сборки. Работает на GitHub Pages.
+A static portfolio built with HTML and CSS. No build step or dependencies are needed; GitHub Pages can publish this folder directly.
 
-## Структура
+## Files
 
-```
-index.html            — главная (hero, проекты, обо мне, контакты)
-style.css             — все стили (цвета и шрифты — в начале файла, в :root)
-projects/project-1.html — шаблон кейса; копируйте для новых проектов
-assets/               — обложки, картинки, cv.pdf
-.nojekyll             — чтобы GitHub Pages отдавал файлы как есть
-```
+- `index.html` — portfolio homepage
+- `projects/` — three project pages
+- `assets/projects/` — project images
+- `style.css` — shared responsive styles
+- `.nojekyll` — tells GitHub Pages to serve files as-is
 
-## Как опубликовать на GitHub Pages
+## Publish on GitHub Pages
 
-1. Зарегистрируйтесь на github.com.
-2. Нажмите **New repository**. Назовите его `ваш-логин.github.io` — тогда адрес сайта будет `https://ваш-логин.github.io`. (Можно любое имя, например `portfolio` — тогда адрес `https://ваш-логин.github.io/portfolio/`.) Репозиторий должен быть **Public**.
-3. На странице пустого репозитория нажмите **uploading an existing file** и перетащите туда всё содержимое папки (не саму папку, а файлы и папки `assets`, `projects` внутри неё). Нажмите **Commit changes**.
-4. Зайдите в **Settings → Pages**. В разделе *Build and deployment*: Source — **Deploy from a branch**, Branch — **main**, папка **/ (root)**. Нажмите **Save**.
-5. Через 1–2 минуты сайт откроется по адресу, который покажется вверху этой страницы.
+1. Create a repository on GitHub. For a personal site, name it `YOUR-USERNAME.github.io`. For a project site, any repository name works.
+2. Upload the **contents** of this folder (the files and folders inside `portfolio`), then commit them to the `main` branch.
+3. Open **Settings → Pages**. Set the source to **Deploy from a branch**, choose `main` and `/ (root)`, then save.
+4. GitHub will show the published address in the Pages settings after deployment.
 
-Чтобы обновить сайт — снова загрузите изменённые файлы через **Add file → Upload files** (или отредактируйте прямо на GitHub карандашиком). Изменения появятся через минуту.
+## Personalize before sharing
 
-## Что заменить
+- Add your name and a working email or profile link to `index.html` and the project page footers.
+- Replace or remove the generic GitHub link in the Contact section with your own profile.
+- Update the About text and tool list to match your background.
+- The project descriptions are based on the images already in this folder. Add your role, process and verified results where you have them.
 
-- `Your Name`, почту, ссылки (LinkedIn, Behance, ArtStation, Telegram) — в `index.html` и в кейсах.
-- Обложки: положите свои картинки в `assets/` (лучше 1600×1000, JPG/WebP до ~400 КБ) и поменяйте `src` у `<img>`.
-- Резюме: положите файл `assets/cv.pdf`.
-- Новый кейс: скопируйте `projects/project-1.html` → `project-2.html`, поменяйте текст и ссылку на главной.
-
-## Дизайн-токены
-
-| Токен | Значение |
-|---|---|
-| Фон | `#F7F7F5` |
-| Текст | `#202020` |
-| Акцент | `#5601BE` |
-| Шрифт | Manrope (Google Fonts) |
-| Hero | 64–80 px |
-| Заголовки секций | 32–40 px |
-| Заголовки проектов | 24–28 px |
-| Основной текст | 17–18 px |
-| Подписи | 14–15 px |
-
-На мобильных размеры плавно уменьшаются (через `clamp()`), чтобы hero влезал в экран.
+All page and image links are relative, so the site works both at the domain root and in a repository subfolder.
